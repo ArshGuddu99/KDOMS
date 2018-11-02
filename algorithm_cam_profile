@@ -1,0 +1,21 @@
+1. Obtain the values for base radius (rb), offset (e), maximum driving eccentricity during rise (Emax_rise) and fall (Emax_fall), and minimum radius of curvature (Rho_min) and number of cycles (n) as input from user.
+2. Draw the base circle in some colour different than that of the cam.
+3. Initialize Theta_initial=0;
+3. Initialize the loop with number of cycles i as parameter, varying from 1 to n.
+	a. Obtain the functional form of the follower motion from user (Either SHM or Parabolic or Cycloidal or Dwell), from a menu, as a number (C1);
+	b. If SHM or parabolic or Cycloidal, obtain if rise or fall (C2)
+	   b1. If rise, obtain lift (L), and angle of rise (Theta_rise)
+	   b2. If fall, obtain fall (F), and angle of fall (Theta_fall)
+	   b3. Set the equation accordingly.
+	c. Else if dwell, obtain the angle of dwell (Theta_dwell)
+	d. Check if the critical conditions for minimum rb etc, are satisfied.
+	   d1. If no, print "Conditions not satisfied, please check again", wait for 5 seconds, and exit
+	   d2. If yes, carry on.
+	e. Set angle as 90-atan(y'(Theta)/(rb+y(Theta))
+	f. Set radius as sqrt((y(Theta)+rb)2+(y'(Theta))2)
+	g. Plot the point in polar coordinates r, Theta
+	h. Set Theta_initial+=Theta_rise (or) Theta_fall (or) Theta_dwell
+	g. end loop
+4. 
+
+
